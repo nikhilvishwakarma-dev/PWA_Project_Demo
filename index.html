@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#5145e5">
+    <meta name="description" content="PWA Connect responsive PWA learning demo">
+    <title>PWA Connect</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icons/icon-192.png">
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+
+<body>
+    <div class="scrim" id="scrim"></div>
+    <aside class="sidebar" id="sidebar"><a class="brand" href="#overview"><span class="logo">P</span>PWA
+            <b>Connect</b></a>
+        <p class="label">WORKSPACE</p>
+        <nav><a class="nav active" href="#overview">▦ &nbsp; Overview</a><a class="nav" href="#activity">◷ &nbsp;
+                Activity</a><a class="nav" href="#toolkit">⌘ &nbsp; PWA Toolkit</a></nav>
+        <div class="side-note"><span>✦</span><b>Built for the web</b>
+            <p>One experience for desktop and mobile.</p>
+        </div>
+        <div class="profile"><span class="avatar">PC</span>
+            <div><b>Demo Workspace</b><small>PWA learning project</small></div>
+        </div>
+    </aside>
+    <main class="main">
+        <header class="topbar"><button class="menu" id="menu" aria-label="Toggle navigation">☰</button><span
+                class="crumb">WORKSPACE / OVERVIEW</span><span class="online-pill"><i id="topDot"></i><span
+                    id="topStatus">Checking</span></span></header>
+        <section class="heading" id="overview">
+            <div>
+                <p class="eyebrow">PROGRESSIVE WEB APP DEMO</p>
+                <h1>Good to see you 👋</h1>
+                <p class="muted">Here’s what’s happening with your PWA today.</p>
+            </div><button class="primary" id="refresh">↻ Refresh status</button>
+        </section>
+        <section class="hero">
+            <div class="hero-copy"><span class="hero-tag">✦ &nbsp; YOUR PWA WORKSPACE</span>
+                <h2>Your web app.<br><span>Ready for everywhere.</span></h2>
+                <p>Explore installability, connectivity and offline capabilities in one responsive workspace.</p><a
+                    href="#toolkit">Explore PWA toolkit &nbsp; →</a>
+            </div>
+            <div class="hero-art">
+                <div class="orbit"></div>
+                <div class="floating">✦ Installable</div>
+                <div class="mock"><span class="mock-logo">P</span><b>PWA Connect</b><small>One app, many screens</small>
+                    <div class="bars"><i></i><i></i><i></i></div>
+                </div>
+                <div class="floating bottom">↯ Offline ready</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>At a glance</h2>
+                    <p class="muted">Live browser capability checks</p>
+                </div><span class="tag">LIVE STATUS</span>
+            </div>
+            <div class="stats">
+                <article class="stat">
+                    <div class="stat-top"><span>⌁</span><small>NETWORK</small></div><strong
+                        id="connection">Checking…</strong>
+                    <p id="connectionHint">Reading browser connection</p>
+                    <footer><i id="networkDot"></i><span id="networkFoot">Checking status</span></footer>
+                </article>
+                <article class="stat">
+                    <div class="stat-top"><span>⚙</span><small>BACKGROUND</small></div><strong
+                        id="worker">Checking…</strong>
+                    <p>Service Worker registration</p>
+                    <footer><i id="workerDot"></i><span id="workerFoot">Checking status</span></footer>
+                </article>
+                <article class="stat">
+                    <div class="stat-top"><span>▣</span><small>EXPERIENCE</small></div><strong
+                        id="installValue">Browser</strong>
+                    <p id="installHint">Install status depends on browser</p>
+                    <footer><i></i><span id="installFoot">PWA demo</span></footer>
+                </article>
+            </div>
+        </section>
+        <section class="lower">
+            <article class="panel" id="activity">
+                <div class="panel-head">
+                    <div>
+                        <h2>Recent activity</h2>
+                        <p class="muted">Events from this demo session</p>
+                    </div><button class="quiet" id="clear">Clear</button>
+                </div>
+                <div id="activityList">
+                    <div class="activity"><span class="symbol">✓</span>
+                        <div><b>Workspace loaded</b>
+                            <p>The PWA Connect dashboard is ready.</p>
+                        </div><time>Now</time>
+                    </div>
+                </div>
+                <p id="empty" hidden class="muted">No activity yet. Try a toolkit action.</p>
+            </article>
+            <article class="panel" id="toolkit">
+                <div class="panel-head">
+                    <div>
+                        <h2>PWA toolkit</h2>
+                        <p class="muted">Try the demo features</p>
+                    </div><span class="tool-mark">✳</span>
+                </div>
+                <div class="tool"><span class="tool-icon">⌁</span>
+                    <div><b>Connection check</b>
+                        <p>Read browser network status</p>
+                    </div><button class="small" id="check">Check</button>
+                </div>
+                <div class="tool"><span class="tool-icon">♧</span>
+                    <div><b>Local notification</b>
+                        <p>Request notification permission</p>
+                    </div><button class="small" id="notify">Test</button>
+                </div>
+                <div class="tool"><span class="tool-icon">⇩</span>
+                    <div><b>Install application</b>
+                        <p id="installDescription">Check browser install options</p>
+                    </div><button class="small" id="install" disabled>Install</button>
+                </div>
+                <div class="message" id="message" role="status" aria-live="polite">ⓘ &nbsp; Welcome! Try a toolkit
+                    action to explore PWA capabilities.</div>
+            </article>
+        </section>
+        <footer class="footer"><span>© 2026 PWA Connect · Learning demo</span><span>Designed for desktop & mobile</span>
+        </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+</body>
+
+</html>
